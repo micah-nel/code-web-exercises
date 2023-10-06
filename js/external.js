@@ -66,4 +66,3 @@ console.log (rentaltotallist);
 
 
 
-
