@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tilt+Neon&display=swap');
+
+h1{
+    color: aquamarine;
+}
+.fancy-header {
+    color: aquamarine;
+    text-decoration: underline;
+}
+p{
+    color:white;
+
+}
+ul{
+    color:white;
+    list-style-type: upper-roman;
+
+}
+tr{
+    color:white;
+}
+ol{
+    color:white;
+    list-style-type: upper-roman;
+}
+th{
+font-family: "Tilt Neon";
+
+}
+tr{
+    font-family: Tilt Neon;
+
+}
+header.container{
+    text-align: center;
+}
+header.container .row {
+   text-align: center;
+}
+h1, h2, h3, h4, h5, h6{
+    color: aquamarine;
+    text-decoration: underline;
+
+}
+
+
+body {
+    background-color: antiquewhite;
+    font-family: "Roboto", sans-serif;
+
+}
+body{
+    background-image: url("https://images.pexels.com/photos/8474708/pexels-photo-8474708.jpeg?auto=compress&cs=tinysrgb&w=800");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+
