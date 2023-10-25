@@ -68,5 +68,16 @@ nav a:hover {
 }
 button.single-submit {
     flex: 0 0 200px;
+} 
+@media  screen and (max-width: 780px) {
+    .container.hero.row {
+        flex-direction: column;
+    }
+    .container.hero.column:first-child{
+        order: 2;
+    }
+    .container.hero-text.column:last-child{
+        order: 1;
+    }
 }
 
