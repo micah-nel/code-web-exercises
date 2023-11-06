@@ -41,42 +41,58 @@
 // })();
 
 
-function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
+// function shuffle(array) {
+//     let currentIndex = array.length,  randomIndex;
+//
+//     // While there remain elements to shuffle.
+//     while (currentIndex > 0) {
+//
+//         // Pick a remaining element.
+//         randomIndex = Math.floor(Math.random() * currentIndex);
+//         currentIndex--;
+//
+//         // And swap it with the current element.
+//         [array[currentIndex], array[randomIndex]] = [
+//             array[randomIndex], array[currentIndex]];
+//     }
+//
+//     return array;
+// }
+// const creatPairs = (arr) =>{
+//     arr = shuffle(arr)
+//     let studentPairs=[]
+//     while(arr.length > 0) {
+//         let pair =[];
+//         let student1 = arr.pop();
+//         pair.push(student1)
+//         if(arr.length ===0){
+//             studentPairs[studentPairs,length -1].push(student1);
+//         } else {
+//             pair.push(student1)
+//             let student2 = arr.pop();
+//             pair.push(student2);
+//             studentPairs.push(pair)
+//         }
+//     }
+//
+//     return studentPairs;
+// }
+//
+// const student =["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah"];
+//  console.log(creatPairs(student));
 
-    // While there remain elements to shuffle.
-    while (currentIndex > 0) {
-
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-    }
-
-    return array;
+function digitalRoot(n) {
 }
-const creatPairs = (arr) =>{
-    arr = shuffle(arr)
-    let studentPairs=[]
-    while(arr.length > 0) {
-        let pair =[];
-        let student1 = arr.pop();
-        pair.push(student1)
-        if(arr.length ===0){
-            studentPairs[studentPairs,length -1].push(student1);
-        } else {
-            pair.push(student1)
-            let student2 = arr.pop();
-            pair.push(student2);
-            studentPairs.push(pair)
-        }
-    }
+let numArr = n.split ("")
+let result;
 
-    return studentPairs;
+while (numArr.length > 1) {
+    resul= 0;
+    for (let number of numArr){
+        resul +=parseFloat(number);
+    }
+    result = parseFloat(numArr.join(""));
+    return result
+
 }
 
-const student =["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah"];
- console.log(creatPairs(student));
