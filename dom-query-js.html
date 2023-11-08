@@ -24,58 +24,79 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-    <div class="container">
-        <div class="row">
-            <div class="column">
-                <button id="button1">Change Header Text</button>
-                <button id="button2">Change Sub Header Color</button>
-                <button id="button3">Make colors gray</button>
-                <button id="button4">Make one blue</button>
-                <button id="button5">Mission Accomplished</button>
-            </div>
-        </div>
-    </div>
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="column">-->
+<!--                <button id="button1">Change Header Text</button>-->
+<!--                <button id="button2">Change Sub Header Color</button>-->
+<!--                <button id="button3">Make colors gray</button>-->
+<!--                <button id="button4">Make one blue</button>-->
+<!--                <button id="button5">Mission Accomplished</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 <script>
         "use strict";
-        // // TODO: Uncomment next line and get the main header element by id
-        const mainHeader = document.getElementById(`main-header`);
-        document.getElementById("button1").addEventListener("click",e => {
-            mainHeader.innerHTML = "JavaScript is Cool";
+        // // // TODO: Uncomment next line and get the main header element by id
+        // const mainHeader = document.getElementById(`main-header`);
+        // document.getElementById("button1").addEventListener("click",e => {
+        //     mainHeader.innerHTML = "JavaScript is Cool";
+        // });
+        //
+        // // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // // mainHeader.innerHTML = "JavaScript is Cool"
+        // //
+        // // // TODO: Uncomment the next line and get the sub header element by id
+        //  const subHeader = document.getElementById(`sub-header`);
+        // document.getElementById("button2").addEventListener("click",e => {
+        //     subHeader.style.color = "blue"
+        // });
+        // // // TODO: Set the text color of subHeader to blue
+        // // subHeader.style.color = "blue"
+        // //
+        // // // TODO: Uncomment the next line and get all list items
+        // const listItems = document.querySelectorAll(`li`);
+        // document.getElementById("button3").addEventListener("click",e => {
+        //     for (let i = 0; i < listItems.length; i++) {
+        //         listItems[i].style.color = "gray"
+        //     }
+        // });
+        // // // TODO: Set text color on every other list item to grey
+        // // for (let i = 0; i < listItems.length; i++) {
+        // //     listItems[i].style.color = "gray"
+        // // }
+        // // // TODO: Set text color of li with dbid = 1 to blue
+        // document.getElementById("button4").addEventListener("click",e => {
+        //     document.querySelector(`ul li`).style.color = "blue"
+        // });
+        // //
+        // // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        //  const subParagraphs = document.querySelectorAll(`.sub-paragraph`) ;
+        // document.getElementById("button5").addEventListener("click",e => {
+        //     subParagraphs[0].innerText = "Mission Accomplished!"
+        // });
+        // // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        const myHeading = document.getElementById('main-header');
+        document.querySelector('#main-header').addEventListener("click", () => {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            myHeading.style.backgroundColor = randomColor;
+        });
+        const paragraph = document.querySelector('p');
+        paragraph.addEventListener("dblclick", (e) => {
+           paragraph.style.fontSize = '18px';
+        });
+        const listItems = document.querySelectorAll(`li`);
+        listItems.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+                item.style.color = 'red';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.color = 'black';
+            });
         });
 
-        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        // mainHeader.innerHTML = "JavaScript is Cool"
-        //
-        // // TODO: Uncomment the next line and get the sub header element by id
-         const subHeader = document.getElementById(`sub-header`);
-        document.getElementById("button2").addEventListener("click",e => {
-            subHeader.style.color = "blue"
-        });
-        // // TODO: Set the text color of subHeader to blue
-        // subHeader.style.color = "blue"
-        //
-        // // TODO: Uncomment the next line and get all list items
-        const listItems = document.querySelectorAll(`li`);
-        document.getElementById("button3").addEventListener("click",e => {
-            for (let i = 0; i < listItems.length; i++) {
-                listItems[i].style.color = "gray"
-            }
-        });
-        // // TODO: Set text color on every other list item to grey
-        // for (let i = 0; i < listItems.length; i++) {
-        //     listItems[i].style.color = "gray"
-        // }
-        // // TODO: Set text color of li with dbid = 1 to blue
-        document.getElementById("button4").addEventListener("click",e => {
-            document.querySelector(`ul li`).style.color = "blue"
-        });
-        //
-        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-         const subParagraphs = document.querySelectorAll(`.sub-paragraph`) ;
-        document.getElementById("button5").addEventListener("click",e => {
-            subParagraphs[0].innerText = "Mission Accomplished!"
-        });
-        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+
 
 </script>
 </body>
