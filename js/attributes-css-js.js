@@ -10,7 +10,7 @@ setTimeout(()=>{
 
 const profileDesc = document.querySelector("#profile-desc")
 setTimeout(()=>{
-    profileDesc.style.color = "blue";
+    profileDesc.style.color = "red";
 },6000)
 
 const profileCard = document.querySelector("#profile-card")
