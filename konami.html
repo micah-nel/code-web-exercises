@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konami Code Tracker</title>
+</head>
+<body>
+<h1>Press the Konami Code:</h1>
+<div id="keyTracker"></div>
+
+<script>
+    // Define the Konami Code sequence
+    const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+
+    // Array to store user's input
+    const userInput = [];
+
+    // Reference to the key tracker element
+    const keyTracker = document.getElementById("keyTracker");
+
+    // Event listener for keyboard input
+    document.addEventListener("keydown", function (event) {
+        // Convert the key code to its lowercase equivalent
+        const key = event.key.toLowerCase();
+
+        // Add the key to the userInput array
+        userInput.push(key);
+
+        // Update the content of the key tracker element
+        keyTracker.textContent = userInput.join(" ");
+
+        // Check if the user's input matches the Konami Code
+        if (userInput.join(" ") === konamiCode.join(" ")) {
+            // Trigger the desired action (show an alert)
+            alert("You have added 30 lives!");
+            // Clear the userInput array for the next input
+            userInput.length = 0;
+            // Clear the key tracker content
+            keyTracker.textContent = "";
+        }
+
+        // Ensure the userInput array doesn't get too long (more than the length of the Konami Code)
+        if (userInput.length > konamiCode.length) {
+            userInput.shift(); // Remove the first element if the array is too long
+        }
+    });
+</script>
+</body>
+</html>
+</html>
