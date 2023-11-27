@@ -15,17 +15,17 @@
 //
 //     });
 //
-const getPokemon = (id=1) =>{
-    const url =`https://pokeapi.co/api/v2/pokemon/$[id}`;
-    const options = {
-    method: "GET",
-    headers: {
-        "Content-Type": "application/json"
-        }
-    }
-    const response = await fetch(url, options)
-    const data = await response.json();
-    return data
+// const getPokemon = (id=1) =>{
+//     const url =`https://pokeapi.co/api/v2/pokemon/$[id}`;
+//     const options = {
+//     method: "GET",
+//     headers: {
+//         "Content-Type": "application/json"
+//         }
+//     }
+//     const response = await fetch(url, options)
+//     const data = await response.json();
+//     return data
 
 //     fetch(url, options)
 //     .then((response)=>{
