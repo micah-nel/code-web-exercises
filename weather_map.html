@@ -5,17 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mapbox Demo</title>
+    <title>Open WeatherAPI</title>
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
-
 <body>
 <div class="page-wrapper">
-    <div id="map" class="container-fluid flex-grow-1 p-0"></div>
+    <div id="map" class="container-fluid flex-grow-1"></div>
+    <div class="container-fluid p-0">
+        <div id="cardRow" class="row p-0">
+            <div id="card" class="col d-flex">
+            </div>
+        </div>
+    </div>
 </div>
-
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-<script type="module" src="./js/mapbox_maps_api.js"></script>
+<script type="module" src="js/weather_map.js"></script>
 </body>
-
 </html>
